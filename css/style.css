@@ -1,4 +1,301 @@
+@charset "UTF-8";
+/* Обозначаем цвет фона*/
 * {
-  color: green;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: #131313;
+  background-color: #eef3f5;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 40px;
+  margin: 0;
+}
+
+a {
+  color: #009adf;
+}
+
+a.btn {
+  padding: 20px 30px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a.btn-primary {
+  background-color: #009adf;
+  border-bottom: 5px solid #0077ac;
+}
+
+a.btn-primary:hover {
+  background-color: #00a1e9;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.slick-active {
+  outline: none !important;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?46644385");
+  src: url("../fonts/fontello.eot?46644385#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?46644385") format("woff2"), url("../fonts/fontello.woff?46644385") format("woff"), url("../fonts/fontello.ttf?46644385") format("truetype"), url("../fonts/fontello.svg?46644385#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?46644385#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+/* '' */
+.icon-instagram:before {
+  content: '\f16d';
+}
+
+/* '' */
+.icon-vkontakte:before {
+  content: '\f189';
+}
+
+/* '' */
+.top-nav {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.top-nav__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-nav__menu li {
+  margin-right: 45px;
+}
+
+.top-nav__menu li a {
+  color: #131313;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.top-nav__menu li a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #009adf;
+  display: block;
+  -webkit-transform: translateY(37px) scale(0);
+          transform: translateY(37px) scale(0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.top-nav__menu li a:hover::after {
+  -webkit-transform: translateY(37px) scale(1);
+          transform: translateY(37px) scale(1);
+}
+
+.left-sidebar {
+  margin-top: 40px;
+}
+
+.left-sidebar__menu {
+  list-style: none;
+  padding: 0;
+  background-color: #fff;
+}
+
+.left-sidebar__menu li {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.left-sidebar__menu li:first-child a {
+  padding-top: 20px;
+}
+
+.left-sidebar__menu li:last-child a {
+  padding-bottom: 20px;
+}
+
+.left-sidebar__menu li:hover {
+  background-color: #009adf;
+}
+
+.left-sidebar__menu li:hover a {
+  color: #fff;
+}
+
+.left-sidebar__menu li a {
+  display: block;
+  text-decoration: none;
+  color: #131313;
+  font-size: 16px;
+  padding: 15px 29px;
+}
+
+.left-sidebar__object {
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+.left-sidebar__object-description {
+  padding: 30px;
+}
+
+.left-sidebar__object-description h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.directions {
+  margin-top: 80px;
+}
+
+.directions-block {
+  background-color: #fff;
+  height: 220px;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.directions-block h3 {
+  color: #009adf;
+}
+
+.footer {
+  background-color: #131313;
+  color: #555555;
+  padding: 59px 0;
+  margin-top: 60px;
+}
+
+.footer-policy-link {
+  font-size: 12px;
+}
+
+.footer p {
+  margin-bottom: 14px;
+}
+
+.footer a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer small {
+  display: block;
+  margin-top: 56px;
+  font-size: 10px;
+  line-height: 16px;
+  max-width: 80%;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  line-height: 32px;
+}
+
+.footer-contacts, .footer-social__links {
+  text-align: right;
+}
+
+.footer-contacts__phone {
+  font-size: 20px;
+  color: #009adf;
+}
+
+.footer-social__links li {
+  display: inline-block;
+}
+
+.footer-social__links li a {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50%;
+  margin-left: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-social__links li a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #131313;
 }
 /*# sourceMappingURL=style.css.map */

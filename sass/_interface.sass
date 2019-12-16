@@ -1,0 +1,28 @@
+*
+    box-sizing: border-box
+html
+    font-size: 14px
+body
+    color: $dark
+    background-color: $body-bg
+    font-family: 'Roboto', sans-serif
+    padding-top: 40px
+    margin: 0
+a
+    color: $active-color
+a.btn
+    padding: 20px 30px
+    display: inline-block
+    color: $white
+    border-radius: 5px
+    text-decoration: none
+    font-size: 16px
+    font-weight: 700
+    &-primary
+        background-color: $active-color
+        border-bottom: 5px solid darken($active-color, 10%)
+        &:hover
+            background-color: lighten($active-color, 2%)
+h2
+        font-size: 24px
+
